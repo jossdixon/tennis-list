@@ -4,3 +4,13 @@
       <%= link_to "Add Brand", new_brand_path, class:"btn btn-primary" %>
   </div>
 </div>
+
+<div class="container">
+  <div class="cards mt-3 pt-2">
+      <% @brands.each do |brand| %>
+        <div class="card-category">
+           <%= link_to brand.name, brand_path(brand) %>
+        </div>
+      <% end %>
+  </div>
+</div>
