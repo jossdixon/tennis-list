@@ -3,15 +3,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 75px;
-  padding: 0px 20px;
-  margin-top: 10px;
+  height: 50px;
+  padding: 10px 10px;
   color: $white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 20px;
 }
+
 .footer-links {
   display: flex;
   align-items: center;
 }
+
 .footer-links a {
   color: $white;
   opacity: 0.5;
@@ -19,9 +24,11 @@
   font-size: 24px;
   padding: 0px 10px;
 }
+
 .footer-links a:hover {
   opacity: 1;
 }
+
 .footer .fa-heart {
   color: #D23333;
 }

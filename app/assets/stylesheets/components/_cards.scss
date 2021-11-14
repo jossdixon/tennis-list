@@ -58,6 +58,26 @@
   padding: 16px;
 }
 
+.card-remove-link {
+  color: $blue;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 15px;
+  top: 0px;
+  opacity: 0.8;
+  font-weight: lighter;
+  text-decoration: none;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+  }
+}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
