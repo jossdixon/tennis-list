@@ -1,0 +1,14 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://s3.eu-west-2.amazonaws.com/luxurylondon.co.uk-storage-bucket-001/images/060319122708/card/wimbledon-london-2019-xl-hd.jpg);">
+  <div class="container">
+    <h1>Add a Sponsorship</h1>
+      <%= link_to "Home", brands_path, class:"btn btn-primary" %>
+  </div>
+</div>
+<div class="container mt-3">
+  <h2>Who is being sponsored?</h2>
+  <%= simple_form_for [@brand, @sponsorship] do |f| %>
+    <%= f.association :player %>
+    <%# <%= f.input :photo, as: :file %>
+    <%= f.submit "Establish", class: "btn btn-success" %>
+  <% end %>
+</div>

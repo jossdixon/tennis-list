@@ -1,0 +1,29 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.atptour.com/en/tournaments/roland-garros/520/-/media/images/news/2016-photo-upload/roland-garros-2015-final-stadium.jpg);">
+  <div class="container">
+    <h1><%= @brand.name %></h1>
+      <%= link_to "Home", brands_path, class:"btn btn-primary" %>
+  </div>
+</div>
+<div class="container p-3">
+  <%= link_to "Sponsorships", new_brand_sponsorship_path(@brand), class:"btn btn-success" %>
+</div>
+
+<div class="container p-2">
+  <div class="row">
+    <% @brand.sponsorships.each do |sponsorship| %>
+      <div class="col-sm">
+        <div class="card-product">
+          <%= image_tag sponsorship.player.image_url %>
+        <div class="card-product-infos">
+          <h2><%= sponsorship.player.name %></h2>
+          <p>Ranking: <%= sponsorship.player.ranking %></p>
+          <p>Nationality: <%= sponsorship.player.country %></p>
+          <%= link_to sponsorship_path(sponsorship), method: :delete, class:'card-remove-link', data: { confirm: "Delete #{sponsorship.player.name} sponsorship?"} do %>
+            <i class="fas fa-trash-alt"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
