@@ -6,25 +6,12 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container mb-5">
   <div class="cards mt-3 pt-2">
       <% @brands.each do |brand| %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= brand.photo.attached? ? cl_image_path(brand.photo.key) : 'https://cdn.shopify.com/s/files/1/1749/5899/articles/tennis-string-101-resized_1000x.jpg?v=1541364562'%>)">
           <%= link_to brand.name, brand_path(brand) %>
         </div>
       <% end %>
-  </div>
-</div>
-
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    This is a Rails project by Joss Dixon.
   </div>
 </div>
