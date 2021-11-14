@@ -11,12 +11,12 @@
 <div class="container p-2">
   <div class="row">
     <% @brand.sponsorships.each do |sponsorship| %>
-      <div class="col-sm">
+      <div class="col-sm-4 mb-4">
         <div class="card-product">
           <%= image_tag sponsorship.player.image_url %>
         <div class="card-product-infos">
           <h2><%= sponsorship.player.name %></h2>
-          <p>Ranking: <%= sponsorship.player.ranking %></p>
+          <p><strong>Ranking: <%= sponsorship.player.ranking %></strong></p>
           <p>Nationality: <%= sponsorship.player.country %></p>
           <%= link_to sponsorship_path(sponsorship), method: :delete, class:'card-remove-link', data: { confirm: "Delete #{sponsorship.player.name} sponsorship?"} do %>
             <i class="fas fa-trash-alt"></i>
