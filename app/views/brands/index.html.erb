@@ -9,9 +9,8 @@
 <div class="container">
   <div class="cards mt-3 pt-2">
       <% @brands.each do |brand| %>
-        <div class="card-category">
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= brand.photo.attached? ? cl_image_path(brand.photo.key) : 'https://cdn.shopify.com/s/files/1/1749/5899/articles/tennis-string-101-resized_1000x.jpg?v=1541364562'%>)">
-           <%= link_to brand.name, brand_path(brand) %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= brand.photo.attached? ? cl_image_path(brand.photo.key) : 'https://cdn.shopify.com/s/files/1/1749/5899/articles/tennis-string-101-resized_1000x.jpg?v=1541364562'%>)">
+          <%= link_to brand.name, brand_path(brand) %>
         </div>
       <% end %>
   </div>
