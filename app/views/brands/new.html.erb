@@ -8,7 +8,7 @@
   <h2>What brand is going in the kitbag?</h2>
   <%= simple_form_for @brand do |f| %>
     <%= f.input :name %>
-    <%# <%= f.input :photo, as: :file %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit "In the bag", class: "btn btn-success" %>
   <% end %>
 </div>

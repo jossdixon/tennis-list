@@ -19,7 +19,7 @@
           <p><strong>Ranking: <%= sponsorship.player.ranking %></strong></p>
           <p>Nationality: <%= sponsorship.player.country %></p>
           <%= link_to sponsorship_path(sponsorship), method: :delete, class:'card-remove-link', data: { confirm: "Delete #{sponsorship.player.name} sponsorship?"} do %>
-            <i class="fas fa-trash-alt"></i>
+            <i class="fas fa-times-circle"></i>
           <% end %>
         </div>
       </div>

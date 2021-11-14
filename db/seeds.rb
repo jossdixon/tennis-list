@@ -19,8 +19,19 @@ norrie = { name: "Cameron Norrie", country: "United Kingdom", ranking: 12, image
 faa = { name: "Felix Auger-Aliassime", country: "Canada", ranking: 11, image_url: "https://images.tennis.com/image/private/t_q-best/tenniscom-prd/wjmwxo3t6j828fwhhxfm.jpg" }
 schwartzman = { name: "Diego Schwartzman", country: "Argentina", ranking: 13, image_url: "https://www.tennisworldusa.org/imge/108255/diego-schwartzman-one-lady-in-antwerp-gives-me-chocolates-after-my-matches.jpg" }
 rublev = { name: "Andrey Rublev", country: "Russia", ranking: 5, image_url: "https://www.tennismajors.com/app/uploads/2021/10/Andrey-Rublev.jpg" }
+zverev = { name: "Alexander Zverev", country: "Germany", ranking: 3, image_url: "https://static.dw.com/image/58720365_101.jpg" }
+ruud = { name: "Casper Ruud", country: "Norway", ranking: 8, image_url: "https://www.atptour.com/en/news/www.atptour.com/-/media/images/news/2021/04/16/18/05/ruud-monte-carlo-2021-reaction-friday.jpg" }
+sinner = { name: "Jannik Sinner", country: "Italy", ranking: 10, image_url: "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/X6HRBEVQWZLDPENTMYGDA5AXDE.jpg" }
+thiem = { name: "Dominic Thiem", country: "Austria", ranking: 14, image_url: "https://pbs.twimg.com/media/E0kYmWBXMAAX0VS.jpg" }
+monfils = { name: "Gael Monfils", country: "France", ranking: 21, image_url: "https://cdn.artphotolimited.com/images/59888232b0ba742a2efde168/1000x1000/gael-monfils.jpg" }
+deminaur = { name: "Alex de Minaur", country: "Australia", ranking: 33, image_url: "https://static01.nyt.com/images/2018/10/26/sports/26minaur-inyt1/26minaur-inyt1-superJumbo.jpg" }
+goffin = { name: "David Goffin", country: "Belgium", ranking: 38, image_url: "https://pbs.twimg.com/media/EzBQRehWgAooTCE.jpg" }
+botic = { name: "Botic van de Zandschulp", country: "The Netherlands", ranking: 61, image_url: "https://images0.persgroep.net/rcs/fZ4iS0joALVrqYSfe1npgUq0uOE/diocontent/207281241/_fitwidth/694/?appId=21791a8992982cd8da851550a453bd7f&quality=0.8" }
+nishikori = { name: "Kei Nishikori", country: "Japan", ranking: 48, image_url: "https://cdn-japantimes.com/wp-content/uploads/2021/09/np_file_109676.jpeg" }
+isner = { name: "John Isner", country: "USA", ranking: 24, image_url: "https://image-cdn.essentiallysports.com/wp-content/uploads/20210202192933/GettyImages-1200044426-1.jpg" }
 
-[ federer, nadal, djokovic, medvedev, tiafoe, tsitsipas, norrie, faa, schwartzman, rublev ].each do |attr|
+
+[ federer, nadal, djokovic, medvedev, tiafoe, tsitsipas, norrie, faa, schwartzman, rublev, zverev, ruud, sinner, thiem, monfils, deminaur, goffin, botic, nishikori, isner ].each do |attr|
   player = Player.create!(attr)
   puts "Created #{player.name}."
 end
