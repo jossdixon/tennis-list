@@ -8,7 +8,6 @@
   <h2>Who is being sponsored?</h2>
   <%= simple_form_for [@brand, @sponsorship] do |f| %>
     <%= f.association :player %>
-    <%# <%= f.input :photo, as: :file %>
     <%= f.submit "Establish", class: "btn btn-success" %>
   <% end %>
 </div>
